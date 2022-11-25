@@ -1,4 +1,4 @@
-package cn.ean.autogenerator.model.bo;
+package cn.ean.autogenerator.model.po;
 
 import lombok.Data;
 

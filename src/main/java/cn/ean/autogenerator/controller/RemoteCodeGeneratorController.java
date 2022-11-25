@@ -1,7 +1,11 @@
 package cn.ean.autogenerator.controller;
 
-import cn.ean.autogenerator.model.bo.*;
 import cn.ean.autogenerator.aspect.*;
+import cn.ean.autogenerator.model.bo.ResponseBO;
+import cn.ean.autogenerator.model.po.DataSourcePO;
+import cn.ean.autogenerator.model.po.PackagePO;
+import cn.ean.autogenerator.model.vo.DataSourceVO;
+import cn.ean.autogenerator.model.vo.GlobalConfigVO;
 import io.swagger.annotations.ApiOperation;
 import cn.ean.autogenerator.service.RemoteCodeGeneratorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,15 +35,15 @@ public class RemoteCodeGeneratorController {
     @Log(title = "全局配置", businessType = BusinessTypeEnum.INSERT)
     @ApiOperation(value = "全局配置")
     @PostMapping("/mysql/globalConfig")
-    public void globalConfig(@RequestBody GlobalConfigPO globalConfigPO) {
-        remoteCodeGeneratorService.defineGlobalConfig(globalConfigPO);
+    public ResponseBO globalConfig(@RequestBody GlobalConfigVO globalConfigVO) {
+        return remoteCodeGeneratorService.defineGlobalConfig(globalConfigVO);
     }
 
     @Log(title = "数据源配置", businessType = BusinessTypeEnum.INSERT)
     @ApiOperation(value = "数据源配置")
     @PostMapping("/mysql/dataSource")
-    public void dataSource(@RequestBody DataSourcePO dataSourcePO) {
-        remoteCodeGeneratorService.defineDataSource(dataSourcePO);
+    public ResponseBO dataSource(@RequestBody DataSourceVO dataSourceVO) {
+        return remoteCodeGeneratorService.defineDataSource(dataSourceVO);
     }
 
     @Log(title = "包配置", businessType = BusinessTypeEnum.INSERT)

@@ -1,8 +1,10 @@
 package cn.ean.autogenerator.service;
 
-import cn.ean.autogenerator.model.bo.DataSourcePO;
-import cn.ean.autogenerator.model.bo.GlobalConfigPO;
-import cn.ean.autogenerator.model.bo.PackagePO;
+import cn.ean.autogenerator.model.bo.ResponseBO;
+import cn.ean.autogenerator.model.po.DataSourcePO;
+import cn.ean.autogenerator.model.po.PackagePO;
+import cn.ean.autogenerator.model.vo.DataSourceVO;
+import cn.ean.autogenerator.model.vo.GlobalConfigVO;
 
 /**
  * @author ean
@@ -11,9 +13,9 @@ import cn.ean.autogenerator.model.bo.PackagePO;
  **/
 public interface RemoteCodeGeneratorService {
 
-    void defineGlobalConfig(GlobalConfigPO globalConfigPO);
+    ResponseBO defineGlobalConfig(GlobalConfigVO globalConfigVO);
 
-    void defineDataSource(DataSourcePO dataSourcePO);
+    ResponseBO defineDataSource(DataSourceVO dataSourceVO);
 
     void definePackage(PackagePO packagePO);
 }
