@@ -16,7 +16,7 @@ public class GlobalConfigVO {
 
 
     @ApiModelProperty("逆向代码生成地址")
-    private String OutputDirectory;
+    private String OutputDirectoryForUser;
 
     @ApiModelProperty("是否开启输出目录:1.开启，2.关闭")
     private Byte Open;
@@ -25,7 +25,7 @@ public class GlobalConfigVO {
     private Byte BaseResultMap;
 
     @ApiModelProperty("逆向xml文件是否开启 BaseResultList:1:开启，2:关闭")
-    private Byte BaseResultList;
+    private Byte BaseColumnList;
 
     @ApiModelProperty("逆向实体类是否开启 Swagger2注解:1:开启，2:关闭")
     private Byte Swagger2;

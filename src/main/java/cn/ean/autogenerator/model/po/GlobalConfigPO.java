@@ -14,8 +14,8 @@ import lombok.RequiredArgsConstructor;
  **/
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
-@TableName("global_config")
+//@RequiredArgsConstructor
+@TableName("globalconfig")
 @ApiModel(value = "GlobalConfigPO对象", description = "GlobalConfigPO对象")
 public class GlobalConfigPO {
 
@@ -31,8 +31,8 @@ public class GlobalConfigPO {
     @ApiModelProperty("逆向xml文件是否开启 BaseResultMap:1:开启，2:关闭")
     private Boolean BaseResultMap;
 
-    @ApiModelProperty("逆向xml文件是否开启 BaseResultList:1:开启，2:关闭")
-    private Boolean BaseResultList;
+    @ApiModelProperty("逆向xml文件是否开启 BaseColumnList:1:开启，2:关闭")
+    private Boolean BaseColumnList;
 
     @ApiModelProperty("逆向实体类是否开启 Swagger2注解:1:开启，2:关闭")
     private Boolean Swagger2;

@@ -1,5 +1,6 @@
 package cn.ean.autogenerator.model.po;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
@@ -10,13 +11,17 @@ import lombok.Data;
 @Data
 public class PackagePO {
 
-    private String Entity;
+    private String parent;
 
-    private String Mapper;
+    private String entity;
 
-    private String Service;
+    private String mapper;
 
-    private String ServiceImpl;
+    private String service;
 
-    private String Controller;
+
+    @ApiModelProperty("ex: service.impl")
+    private String serviceImpl;
+
+    private String controller;
 }

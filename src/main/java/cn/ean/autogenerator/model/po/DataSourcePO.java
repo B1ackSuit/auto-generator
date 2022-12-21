@@ -13,8 +13,8 @@ import lombok.RequiredArgsConstructor;
  **/
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
-@TableName("ag_datasource")
+//@RequiredArgsConstructor
+@TableName("datasource")
 @ApiModel(value = "DataSourcePO对象", description = "DataSourcePO对象")
 public class DataSourcePO {
 

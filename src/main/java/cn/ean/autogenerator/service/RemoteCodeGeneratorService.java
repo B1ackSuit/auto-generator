@@ -4,6 +4,7 @@ import cn.ean.autogenerator.model.bo.ResponseBO;
 import cn.ean.autogenerator.model.po.DataSourcePO;
 import cn.ean.autogenerator.model.po.PackagePO;
 import cn.ean.autogenerator.model.vo.DataSourceVO;
+import cn.ean.autogenerator.model.vo.GeneratorModelIdVO;
 import cn.ean.autogenerator.model.vo.GlobalConfigVO;
 
 /**
@@ -18,4 +19,6 @@ public interface RemoteCodeGeneratorService {
     ResponseBO defineDataSource(DataSourceVO dataSourceVO);
 
     void definePackage(PackagePO packagePO);
+
+    ResponseBO autoGenerator(GeneratorModelIdVO generatorModelIdVO);
 }

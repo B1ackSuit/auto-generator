@@ -8,6 +8,8 @@ class AutoGeneratorApplicationTests {
 
     @Test
     void contextLoads() {
+        String userCurrentWorkingDirectory = System.getProperty("user.dir");
+        System.out.println("user.dir: \n" + userCurrentWorkingDirectory);
     }
 
 }
